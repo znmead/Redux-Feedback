@@ -34,7 +34,7 @@ function Feeling() {
             <form className='add-feeling' onSubmit={handleSubmit}>
                 <input
                     id='feeling'
-                    required
+                    required // input validation works
                     type='number'
                     placeholder='Feelings here'
                     value={feeling}
