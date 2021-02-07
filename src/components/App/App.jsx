@@ -6,8 +6,11 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 //TODO: import info
 
 import Feeling from '../Feeling/Feeling.jsx'; 
+import Understanding from '../Understanding/Understanding.jsx';
+import Supported from '../Supported/Supported.jsx';
+// import Comments from '../Comments/Comments.jsx';
+// import Review from '../Review/Review.jsx;
 // import Admin from '../Admin/Admin';
-// impor
 
 
 
@@ -33,8 +36,8 @@ function App() {
   // TODO: Add <Header />
   // TODO: Add <Footer />
   // TODO: Add <Route exact path='/' component={Home} getHome={getHome} />
- /* <Route path='/understanding' component={Understanding} getUnderstanding={getUnderstanding} />
-          <Route path='/support' component={Support} getSupport={getSupport} />
+ /*  />
+           />
           <Route path='/comments' component={Comments} getComments={getComments} />
           <Route path='/review' component={Review} getReview={getReview} />
           <Route path='/Admin' component={Admin} /> */ 
@@ -54,9 +57,9 @@ function App() {
       <div className='App container'>
         <Switch>
           
-          <Route path='/feeling' component={Feeling} getFeedback={getFeedback} />
-          
-    
+          <Route path='/Feeling' component={Feeling} getFeedback={getFeedback} />
+          <Route path='/Understanding' component={Understanding} getFeedback={getFeedback} />
+          <Route path='/Supported' component={Supported} getFeedback={getFeedback} />
 
         </Switch>
       </div>

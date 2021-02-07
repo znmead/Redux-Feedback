@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 // import { useSelector } from 'react-redux'; 
 
@@ -22,14 +22,14 @@ function Feeling() {
             feeling: feeling
         };
         dispatch({ type: 'SET_FEELING', payload: feelings }); // payload is var
-        console.log(`in feeling form`, { feeling });
-        history.push('/Review')
+        console.log(`In feeling form`, { feeling });
+        history.push('/Understanding')
         resetInput();
     }
 
     return (
         <div id='feeling'>
-            <h1>Enter your feelings as 1-5</h1>
+            <h1>How are you feeling today? Please enter your feelings as a 1-5 below. </h1>
 
             <form className='add-feeling' onSubmit={handleSubmit}>
                 <input
