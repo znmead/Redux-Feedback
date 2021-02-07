@@ -1,31 +1,35 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import axios from 'axios';
 
 
 
 function Review() {
-    const history = useHistory(); 
+    const history = useHistory();
 
     // get feedback from the store
     const feeling = useSelector(store => store.feeling);
     const understanding = useSelector(store => store.understanding);
     const support = useSelector(store => store.support);
     const comments = useSelector(store => store.comments);
-    
+
     const handleSubmit = event => {
-        event.preventDefault();
-        let comment = {
-            comments: comments
-        };
-        dispatch({ type: 'SET_COMMENTS', payload: comment }); // payload is var
-        console.log(`In comments form`, { comments });
-        history.push('/Review')
-        resetInput();
+        axios.post('/',
+            {
+                feeling: feeling,
+                understanding: understanding,
+                support: support,
+                comments: comments
+            })
+            .then((result) => {
+                console.log(result);
+            }).catch((err) => {
+                console.log(err);
+            })
     }
 
-  
+
 
     return (
         <div id='review'>
@@ -35,10 +39,8 @@ function Review() {
             <p><span>Understanding: {understanding.understanding}</span></p>
             <p><span>Support: {support.support}</span></p>
             <p><span>Comments: {comments.comments}</span></p>
-                <button type="submit">
-                    Submit
-                </button>
-           
+            <button type="submit" onClick={handleSubmit}>Submit</button>
+
         </div>
     )
 
