@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: skyblue;
 }
 
 .App-header {
@@ -8,6 +9,7 @@
   padding: 20px;
   color: white;
   margin-bottom: 20px;
+  font-family: monospace;
 }
 
 .App-title {
@@ -20,4 +22,12 @@
 
 h4 {
   font-style: italic;
+}
+
+.App_container {
+
+  background-color: skyblue;
+  text-align: center;
+  font-family: monospace;
+
 }

@@ -46,15 +46,15 @@ function App() {
     <Router>
       <div className='App'>
         <header className='App-header'>
-          <h1 className='App-title'>Feedback!</h1>
-          <h4>Don't forget it!</h4>
+          <h1 className='App-title'>This is a Feedback Form!</h1>
+          <h4>Do you get it?</h4>
         </header>
 
 
       </div>
 
 
-      <div className='App container'>
+      <div className='App_container'>
         <Switch>
 
           <Route path='/Feeling' component={Feeling} getFeedback={getFeedback} />
