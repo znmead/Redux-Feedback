@@ -18,10 +18,10 @@ function Feeling() {
 
     const handleSubmit = event => {
         event.preventDefault();
-        let feeling = {
+        let feelings = {
             feeling: feeling
         };
-        dispatch({ type: 'SET_FEELING', payload: feeling });
+        dispatch({ type: 'SET_FEELING', payload: feelings }); // payload is var
         console.log(`in feeling form`, { feeling });
         history.push('/Review')
         resetInput();
