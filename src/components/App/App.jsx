@@ -5,10 +5,10 @@ import { useDispatch } from 'react-redux';
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 //TODO: import info
 
-import Feeling from '../Feeling/Feeling.jsx'; 
+import Feeling from '../Feeling/Feeling.jsx';
 import Understanding from '../Understanding/Understanding.jsx';
 import Supported from '../Supported/Supported.jsx';
-// import Comments from '../Comments/Comments.jsx';
+import Comments from '../Comments/Comments.jsx';
 // import Review from '../Review/Review.jsx;
 // import Admin from '../Admin/Admin';
 
@@ -36,11 +36,11 @@ function App() {
   // TODO: Add <Header />
   // TODO: Add <Footer />
   // TODO: Add <Route exact path='/' component={Home} getHome={getHome} />
- /*  />
-           />
-          <Route path='/comments' component={Comments} getComments={getComments} />
-          <Route path='/review' component={Review} getReview={getReview} />
-          <Route path='/Admin' component={Admin} /> */ 
+  /*  />
+            />
+            />
+   // TODO: add  <Route path='/review' component={Review} getReview={getReview} />
+   // TODO: add  <Route path='/Admin' component={Admin} /> */
 
   return (
     <Router>
@@ -56,10 +56,11 @@ function App() {
 
       <div className='App container'>
         <Switch>
-          
+
           <Route path='/Feeling' component={Feeling} getFeedback={getFeedback} />
           <Route path='/Understanding' component={Understanding} getFeedback={getFeedback} />
           <Route path='/Supported' component={Supported} getFeedback={getFeedback} />
+          <Route path='/Comments' component={Comments} getFeedback={getFeedback} />
 
         </Switch>
       </div>
