@@ -14,7 +14,6 @@ router.get('/', (req, res) => {
 
 router.post('/', async (req, res) => {
     const client = await pool.connect();
-    
 
     try {
         const {

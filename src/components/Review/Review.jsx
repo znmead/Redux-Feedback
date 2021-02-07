@@ -15,7 +15,7 @@ function Review() {
     const comments = useSelector(store => store.comments);
 
     const handleSubmit = event => {
-        axios.post('/',
+        axios.post('/feedback',
             {
                 feeling: feeling,
                 understanding: understanding,
@@ -23,7 +23,7 @@ function Review() {
                 comments: comments
             })
             .then((result) => {
-                console.log(result);
+                console.log(req.body);
             }).catch((err) => {
                 console.log(err);
             })
