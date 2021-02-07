@@ -9,7 +9,7 @@ import Feeling from '../Feeling/Feeling.jsx';
 import Understanding from '../Understanding/Understanding.jsx';
 import Supported from '../Supported/Supported.jsx';
 import Comments from '../Comments/Comments.jsx';
-// import Review from '../Review/Review.jsx;
+import Review from '../Review/Review.jsx';
 // import Admin from '../Admin/Admin';
 
 
@@ -39,7 +39,7 @@ function App() {
   /*  />
             />
             />
-   // TODO: add  <Route path='/review' component={Review} getReview={getReview} />
+   //  />
    // TODO: add  <Route path='/Admin' component={Admin} /> */
 
   return (
@@ -61,7 +61,8 @@ function App() {
           <Route path='/Understanding' component={Understanding} getFeedback={getFeedback} />
           <Route path='/Supported' component={Supported} getFeedback={getFeedback} />
           <Route path='/Comments' component={Comments} getFeedback={getFeedback} />
-
+          <Route path='/review' component={Review} getFeedback={getFeedback} />
+          
         </Switch>
       </div>
 
