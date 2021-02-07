@@ -9,17 +9,48 @@ import logger from 'redux-logger'; // added for debuggin/visibility of state/pay
 
 // TODO: Create four reducers
 
-const storeInstance = createStore( // creates store to "stores" reducers
+const feeling = (state = [], action) => {
+    if (action.type === 'SET_FEELING') {
+        return action.payload;
+    }
+    return state;
+};
+
+const understanding = (state = [], action) => {
+    if (action.type === 'SET_UNDERSTANDING') {
+        return action.payload;
+    }
+    return state;
+};
+
+const support = (state = [], action) => {
+    if (action.type === 'SET_SUPPORT') {
+        return action.payload;
+    }
+    return state;
+};
+
+const comments = (state = [], action) => {
+    if (action.type === 'SET_COMMENTS') {
+        return action.payload;
+    }
+    return state;
+};
+
+const storeInstance = createStore( // creates store to house reducers
     combineReducers(
         {
-
             // Reducer 1
+            feeling: feeling,
 
             // Reducer 2
-
+            understanding: understanding,
+        
             // Reducer 3
+            support: support, 
 
             // Reducer 4
+            comments: comments
         }),
     applyMiddleware(logger),
 
