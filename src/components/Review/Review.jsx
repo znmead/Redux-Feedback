@@ -28,21 +28,17 @@ function Review() {
   
 
     return (
-        <div id='comments'>
+        <div id='review'>
             <h1>Please review your feedback and hit Submit.</h1>
 
-            <form className='add-comments' onSubmit={handleSubmit}>
-                <input
-                    id='comments'
-                    type='text'
-                    placeholder='Comments here'
-                    value={comments}
-                    onChange={(event) => setComments(event.target.value)}
-                />
+            <p><span>Feelings: {feeling.feeling}</span></p>
+            <p><span>Understanding: {understanding.understanding}</span></p>
+            <p><span>Support: {support.support}</span></p>
+            <p><span>Comments: {comments.comments}</span></p>
                 <button type="submit">
                     Submit
                 </button>
-            </form>
+           
         </div>
     )
 
