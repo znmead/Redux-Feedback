@@ -40,7 +40,7 @@ function App() {
       <Route path='/comments' component={Comments} getComments={getComments} />
       <Route path='/review' component={Review} getReview={getReview} />
 
-      
+      <Route path='/Admin' component={Admin} />
       <Route path='/Admin' component={Admin} />
 
     </Switch>
@@ -59,6 +59,8 @@ function App() {
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
       </header>
+      
+
     </div>
   );
 }
