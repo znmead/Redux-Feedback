@@ -29,20 +29,20 @@ function Review() {
                 console.log(err);
             })
 
-            Swal.fire({
-                title: 'Thanks for submitting your feedback?',
-                text: 'Have a great day!',
-                icon: 'success',
-                showCancelButton: false,
-                confirmButtonColor: '#neongreen',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes!'})
-                .then((result) => history.push('/')
-                )
+        Swal.fire({
+            title: 'Thanks for submitting your feedback?',
+            text: 'Have a great day!',
+            icon: 'success',
+            showCancelButton: false,
+            confirmButtonColor: '#neongreen',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes!'})
+            .then((result) => history.push('/')
+            )
     }
 
-    
-    
+
+
 
 
 
