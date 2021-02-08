@@ -17,13 +17,13 @@ function Review() {
     const handleSubmit = event => {
         axios.post('/feedback',
             {
-                feeling: feeling,
-                understanding: understanding,
-                support: support,
-                comments: comments
+                feeling: feeling.feeling,
+                understanding: understanding.understanding,
+                support: support.support,
+                comments: comments.comments
             })
             .then((result) => {
-                console.log(req.body);
+                console.log(result);
             }).catch((err) => {
                 console.log(err);
             })

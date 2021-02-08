@@ -29,11 +29,12 @@ router.post('/', async (req, res) => {
         const feedbackId = insertFeedback.rows[0].id;
 
         await client.query('COMMIT')
-        res.send(201);
+        console.log(req.body);
+        res.sendStatus(201);
     } catch (error) {
         await client.query('ROLLBACK')
         console.log('Error POST /feedback', error);
-        res.send(500);
+        res.sendStatus(500);
     } finally {
         client.release()
     }
