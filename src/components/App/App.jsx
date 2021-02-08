@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 //TODO: import info
 
+import Home from '../Home/Home';
 import Feeling from '../Feeling/Feeling.jsx';
 import Understanding from '../Understanding/Understanding.jsx';
 import Supported from '../Supported/Supported.jsx';
@@ -56,13 +57,13 @@ function App() {
 
       <div className='App_container'>
         <Switch>
-
+          <Route exact path='/' component={Home} getFeedback={getFeedback} />
           <Route path='/Feeling' component={Feeling} getFeedback={getFeedback} />
           <Route path='/Understanding' component={Understanding} getFeedback={getFeedback} />
           <Route path='/Supported' component={Supported} getFeedback={getFeedback} />
           <Route path='/Comments' component={Comments} getFeedback={getFeedback} />
-          <Route path='/review' component={Review} getFeedback={getFeedback} />
-          
+          <Route path='/Review' component={Review} getFeedback={getFeedback} />
+
         </Switch>
       </div>
 
