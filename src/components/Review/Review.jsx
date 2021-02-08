@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
+import Swal from 'sweetalert2'
 
 
 
@@ -27,7 +28,21 @@ function Review() {
             }).catch((err) => {
                 console.log(err);
             })
+
+            Swal.fire({
+                title: 'Thanks for submitting your feedback?',
+                text: 'Have a great day!',
+                icon: 'success',
+                showCancelButton: false,
+                confirmButtonColor: '#neongreen',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes!'})
+                .then((result) => history.push('/')
+                )
     }
+
+    
+    
 
 
 
