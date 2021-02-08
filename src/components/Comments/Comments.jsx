@@ -2,9 +2,8 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
-
 function Comments() {
-    const history = useHistory(); // 
+    const history = useHistory();
     const dispatch = useDispatch();
 
     let [comments, setComments] = useState('');

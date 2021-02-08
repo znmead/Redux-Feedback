@@ -1,10 +1,7 @@
-import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 import Swal from 'sweetalert2'
-
-
 
 function Review() {
     const history = useHistory();
@@ -36,15 +33,11 @@ function Review() {
             showCancelButton: false,
             confirmButtonColor: '#neongreen',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes!'})
+            confirmButtonText: 'Aight!'
+        })
             .then((result) => history.push('/')
             )
     }
-
-
-
-
-
 
     return (
         <div id='review'>

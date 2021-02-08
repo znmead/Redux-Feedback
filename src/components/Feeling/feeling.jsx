@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 // import { useSelector } from 'react-redux'; 
 
-
 function Feeling() {
-    const history = useHistory(); // 
+    const history = useHistory();
     const dispatch = useDispatch();
 
     let [feeling, setFeeling] = useState('');

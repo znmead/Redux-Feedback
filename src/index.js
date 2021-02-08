@@ -5,7 +5,7 @@ import App from './components/App/App';
 
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import logger from 'redux-logger'; // added for debuggin/visibility of state/payloads
+import logger from 'redux-logger'; // added for debugging/visibility of state/payloads
 
 // TODO: Create four reducers
 
@@ -37,6 +37,8 @@ const comments = (state = [], action) => {
     return state;
 };
 
+// const feedBackList
+
 const storeInstance = createStore( // creates store to house reducers
     combineReducers(
         {
@@ -50,7 +52,10 @@ const storeInstance = createStore( // creates store to house reducers
             support: support, 
 
             // Reducer 4
-            comments: comments
+            comments: comments,
+
+            // Reducer 5
+            // feedBackList: feedBackList
         }),
     applyMiddleware(logger),
 

@@ -1,8 +1,8 @@
 import { useHistory } from 'react-router-dom';
 
 function Home() {
-    const history = useHistory(); // 
-    
+    const history = useHistory();
+
     const handleSubmit = event => {
         event.preventDefault();
         history.push('/Feeling')

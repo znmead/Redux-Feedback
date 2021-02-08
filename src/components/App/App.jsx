@@ -13,8 +13,6 @@ import Comments from '../Comments/Comments.jsx';
 import Review from '../Review/Review.jsx';
 // import Admin from '../Admin/Admin';
 
-
-
 function App() {
 
   const dispatch = useDispatch();
@@ -37,11 +35,7 @@ function App() {
   // TODO: Add <Header />
   // TODO: Add <Footer />
   // TODO: Add <Route exact path='/' component={Home} getHome={getHome} />
-  /*  />
-            />
-            />
-   //  />
-   // TODO: add  <Route path='/Admin' component={Admin} /> */
+  // TODO: add  <Route path='/Admin' component={Admin} /> */
 
   return (
     <Router>
@@ -50,10 +44,7 @@ function App() {
           <h1 className='App-title'>This is a Feedback Form!</h1>
           <h4>Do you get it?</h4>
         </header>
-
-
       </div>
-
 
       <div className='App_container'>
         <Switch>
@@ -63,10 +54,8 @@ function App() {
           <Route path='/Supported' component={Supported} getFeedback={getFeedback} />
           <Route path='/Comments' component={Comments} getFeedback={getFeedback} />
           <Route path='/Review' component={Review} getFeedback={getFeedback} />
-
         </Switch>
       </div>
-
     </Router>
 
   );

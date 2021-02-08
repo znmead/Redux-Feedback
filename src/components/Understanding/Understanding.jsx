@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 
 function Understanding() {
-    const history = useHistory(); // 
+    const history = useHistory(); 
     const dispatch = useDispatch();
 
     let [understanding, setUnderstanding] = useState('');
